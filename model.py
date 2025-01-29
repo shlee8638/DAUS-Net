@@ -103,7 +103,7 @@ class ConvBlock(nn.Module):
 
         return x
 
-class DFAUS_net(nn.Module):
+class DAUS_net(nn.Module):
     """
     - in_channels: Number of input channels (e.g., 1 for grayscale images).
     - out_channels: Number of output channels (e.g., 1 for binary segmentation masks).
