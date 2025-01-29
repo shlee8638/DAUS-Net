@@ -103,13 +103,13 @@ class ConvBlock(nn.Module):
 
         return x
 
-class DFFU_net(nn.Module):
+class DFAUS_net(nn.Module):
     """
     - in_channels: Number of input channels (e.g., 1 for grayscale images).
     - out_channels: Number of output channels (e.g., 1 for binary segmentation masks).
     """
     def __init__(self, in_channels, out_channels):
-        super(DFFU_net, self).__init__()
+        super(DAUS_net, self).__init__()
         self.encoder_conv1 = ConvBlock_with_DFF(in_channels, 32)
         self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
         self.encoder_conv2 = ConvBlock_with_DFF(32, 64)
